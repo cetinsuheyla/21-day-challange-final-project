@@ -1,0 +1,291 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+/* navigation bar on larger screens */
+
+nav {
+  background-color: #2e323f;
+  padding: 0.5em;
+}
+
+.container {
+  width: 85%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu_items {
+  display: flex;
+  list-style: none;
+}
+
+.item__link {
+  display: inline-block;
+  padding: 1em;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.item__link:hover {
+  opacity: 0.7;
+}
+
+.toggle_menu {
+  display: none;
+  font-size: 2rem;
+  margin: auto 0;
+  cursor: pointer;
+  color: #fff;
+}
+
+.close_menu {
+  display: none;
+  color: #fff;
+}
+
+.logo {
+  cursor: pointer;
+  margin: auto 0;
+}
+
+/* navigation bar on mobile */
+
+@media (max-width: 700px) {
+  .menu_items {
+    height: 100vh;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #2e323f;
+    left: 0;
+    top: 0;
+    right: 0;
+    transition: top 1s ease;
+    display: none;
+  }
+
+  .close_menu {
+    display: block;
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    cursor: pointer;
+  }
+
+  .toggle_menu {
+    display: block;
+    margin-right: 0;
+  }
+}
+
+/* main page on mobile*/
+
+.main {
+  background-color: #3b4050;
+  color: #fff;
+  padding: 6em 0;
+}
+
+.main__heading {
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+
+span {
+  color: #a59678;
+}
+
+.main__text {
+  font-family: "Montserrat", sans-serif;
+  line-height: 2;
+  font-size: 1.3rem;
+  margin-bottom: 2em;
+}
+
+.button {
+  background-color: #a59678;
+  border-radius: 100px;
+  padding: 0.5em 1em;
+  margin-top: 0.5em;
+}
+
+.main__button {
+  display: inline;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+/* large screen size adjusments*/
+
+@media (min-width: 700px) {
+  .section_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .flex_item {
+    width: 45%;
+  }
+
+  .section_two {
+    padding: 3em 0;
+  }
+
+  .section_two--content {
+    width: 28%;
+  }
+  .section_three {
+    margin: 4em;
+  }
+
+  .last_section--primary_row {
+    width: 40%;
+  }
+
+  .last_section .section_row {
+    align-items: flex-start;
+  }
+}
+
+/* section three medium size screen adjustments */
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  .section_three .section_row {
+    display: block;
+  }
+
+  .section_three--first_row {
+    width: 100%;
+  }
+
+  .section_three--second_row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .second_row--content {
+    width: 30%;
+  }
+}
+
+/* section three large size screen adjustments */
+
+@media (min-width: 1000px) {
+  .section_three--first_row {
+    width: 60%;
+  }
+
+  .section_three--second_row {
+    width: 30%;
+  }
+
+  .section_three .section_row {
+    align-items: flex-start;
+  }
+}
+
+/* section two on mobile */
+
+.section_two {
+  text-align: center;
+  background: #f1e9e5;
+  padding: 4em 0;
+}
+
+.section_two--heading {
+  color: #a59678;
+  margin-bottom: 0.7em;
+  font-size: 2em;
+}
+
+.section_two--text {
+  font-family: "Montserrat", sans-serif;
+  color: #6f737f;
+}
+
+/* section three on mobile */
+
+.section_three {
+  margin-top: 3em;
+}
+
+.section_three--heading {
+  color: #a59678;
+  font-size: 2.2rem;
+}
+
+.section_three--text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  margin: 2em 0;
+  color: #6f737f;
+}
+
+.section_three--img {
+  max-width: 100%;
+}
+
+.second_row--content {
+  background: #3b4050;
+  text-align: center;
+  padding: 2em;
+  margin: 2em 0;
+}
+
+.second_row--heading {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.second_row--text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* last section on mobile */
+
+.last_section {
+  background: #3b4050;
+  padding: 4em 0;
+}
+
+.last_section--heading {
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.last_section--subheading {
+  color: #a59678;
+}
+
+.last_section p {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin: 1em 0;
+  font-weight: lighter;
+  color: #6f737f;
+}
